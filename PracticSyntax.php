@@ -79,7 +79,101 @@ define("constArray",[
     "b",
     "c"
 ]);
-echo constArray[2];
+echo (constArray[2]."<br>");
+//operator in php
+// and	And	$x and $y	True if both $x and $y are true	
+// or	Or	$x or $y	True if either $x or $y is true	
+// xor	Xor	$x xor $y	True if either $x or $y is true, but not both	
+// &&	And	$x && $y	True if both $x and $y are true	
+// ||	Or	$x || $y	True if either $x or $y is true	
+// !	Not	!$x	True if $x is not true
+//operator array in php
+// +	Union	$x + $y	Union of $x and $y	ต่อ array
+// ==	Equality	$x == $y	Returns true if $x and $y have the same key/value pairs	
+// ===	Identity	$x === $y	Returns true if $x and $y have the same key/value pairs in the same order and of the same types	
+// !=	Inequality	$x != $y	Returns true if $x is not equal to $y	
+// <>	Inequality	$x <> $y	Returns true if $x is not equal to $y	
+// !==	Non-identity	$x !== $y	Returns true if $x is not identical to $y
+//Conditional Assignment Operators
+// ?:	Ternary	$x = expr1 ? expr2 : expr3	Returns the value of $x.
+// The value of $x is expr2 if expr1 = TRUE.
+// The value of $x is expr3 if expr1 = FALSE	
+// ??	Null coalescing	$x = expr1 ?? expr2	Returns the value of $x.
+// The value of $x is expr1 if expr1 exists, and is not NULL.
+// If expr1 does not exist, or is NULL, the value of $x is expr2.
+// Introduced in PHP 7	
+
+
+//if else statement
+// if (condition) {
+//     code to be executed if this condition is true;
+//   } elseif (condition) {
+//     code to be executed if first condition is false and this condition is true;
+//   } else {
+//     code to be executed if all conditions are false;
+//   }
+
+
+//Switch case 
+// switch (condition) {
+//     case label1:
+//       code to be executed if n=label1;
+//       break;
+//     case label2:
+//       code to be executed if n=label2;
+//       break;
+//     case label3:
+//       code to be executed if n=label3;
+//       break;
+//       ...
+//     default:
+//       code to be executed if n is different from all labels;
+//   }
+
+// loop 
+// while loop  executes a block of code as long as the specified condition is true.
+$testloop = 0;
+while($testloop<=10){
+    echo ($testloop." ");
+    $testloop++;
+};
+
+//do while loop will run code 1 time first then executes a block of code as long as the specified condition is true
+$do_whileloop = 0;
+echo "<br>";
+do{
+    echo($do_whileloop." ");
+    $do_whileloop+=2;
+}while($do_whileloop<=10);
+echo "<br>";
+//foreach loop this loop use for array
+$number = array(7,8,5,4,6,3,2,1,9,8);
+$age = array("boy"=> 10,"bob"=> 15, "amit"=>30);
+foreach($number as $val){
+echo($val." ");
+};
+echo "<br>";
+foreach($age as $key=>$val){
+    echo($key." is ".$val." years old"."<br>");
+};
+// break and continue
+echo "break if x == 4 <br>"; //end loop if break 
+for ($x = 0; $x < 10; $x++) {
+    if ($x == 4) {
+      break;
+    }
+    echo "The number is: $x <br>";
+  }
+echo "continue if x ==4 <br>"; //จะกลับไปวนลูบใหม่โดยไม่อ่านโค้ดด้านล่าง  
+  for ($x = 0; $x < 10; $x++) {
+    if ($x == 4) {
+      continue;
+    }
+    echo "The number is: $x <br>";
+  }
+
+
+
 ?>
 </body>
 </html>
