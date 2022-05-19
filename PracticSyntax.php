@@ -171,7 +171,25 @@ echo "continue if x ==4 <br>"; //จะกลับไปวนลูบให�
     }
     echo "The number is: $x <br>";
   }
+    
+//Function    
+/*การกำหนดชนิดข้อมูลและค่าดีฟอลในพารามิเตอร์จำเป็นต้องเขียนคำสั่งไว้ด้านบนสุดของtag php 
+<?php declare(strict_types=1); // strict requirement 
 
+function addNumbers(int $a, int $b) {
+  return $a + $b;
+}
+echo addNumbers(5, "5 days");
+// since strict is enabled and "5 days" is not an integer, an error will be thrown
+กำหนดค่าดีฟอล
+function setHeight(int $minheight = 50) {
+  echo "The height is : $minheight <br>";
+}
+setHeight(350);
+setHeight(); // will use the default value of 50
+setHeight(135);
+setHeight(80);
+?>*/
 
 
 ?>
