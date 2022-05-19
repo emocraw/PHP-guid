@@ -153,7 +153,8 @@ foreach($number as $val){
 echo($val." ");
 };
 echo "<br>";
-foreach($age as $key=>$val){
+//foreach loop Associative array
+foreach($age as $key=>$val){ //ตัวแปรสำหรับค่า KeyและValue
     echo($key." is ".$val." years old"."<br>");
 };
 // break and continue
@@ -189,7 +190,44 @@ setHeight(350);
 setHeight(); // will use the default value of 50
 setHeight(135);
 setHeight(80);
-?>*/
+?>
+การกำหนดชนิดข้อมูลในการรีเทิร์นค่าให้ใส่ :ชนิดข้อมูล หน้า { ของฟังก็ชั่น และกำหนดชนิดข้อมูลที่คำสั่ง Return ด้วย
+<?php declare(strict_types=1); // strict requirement
+function addNumbers(float $a, float $b) : int {
+  return (int)($a + $b);
+}
+echo addNumbers(1.2, 5.2);
+?>
+
+ฟังก์ชั่นแบบเปลี่ยนชนิดข้อมูลตามค่าจริงที่ได้ ต้องใส่&หน้าตัวแปร
+function add_five(&$value) {
+  $value += 5;
+}
+
+$num = 2;
+add_five($num);
+echo $num;
+
+Array
+$car = array(a,b,c,d);
+นับจำนวนสมาชิก array 
+count($car);
+
+Associative Arrays
+$car = array("bm" => 5000,"ben" => 7500,"volvo"=>8000);
+การเรียกใช้
+echo $car["bm"];
+
+
+คำสั่งจัดเรียง Array
+sort() - sort arrays in ascending order
+rsort() - sort arrays in descending order
+asort() - sort associative arrays in ascending order, according to the value
+ksort() - sort associative arrays in ascending order, according to the key
+arsort() - sort associative arrays in descending order, according to the value
+krsort() - sort associative arrays in descending order, according to the key
+*/
+    
 
 
 ?>
