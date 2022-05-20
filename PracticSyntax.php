@@ -289,6 +289,25 @@ $_POST
 ทำงานเหมือนด้านบนแต่จะไม่โชว์ในแทบ URL
 $_GET
 ทำงานPOSTด้านบนแต่จะโชว์ URI ในแทบ URL
+
+Regular Expression Functions
+echo preg_match("/คำที่ให้ค้นหา/i","String ทั้งหมด"); ผลลัพธ์จะเป็น 1 หรือ 0
+echo preg_match_all("/คำที่ให้ค้นหา/i","String ทั้งหมด"); ผลลัพธ์จะได้เท่ากับจำนวนคำที่หาเจอในชุดสตริง ตั้งแต่1ขึ้นไป หากไม่เจอเลยจะเป็น 0
+replace
+echo preg_replace("/คำที่ให้ค้นหา/i", "คำที่จะให้วางทับ", "String ทั้งหมด"); ผลลัพธ์เป็นสตริง
+
+Forms
+เวลาที่เรากดปุ่ม Submit ไม่ว่าจะเป็น Method get หรือ Post จะสร้าง Array ($_ประเภทMethod(key1=>value1,key2=>value2,key3=>value3)) key คือค่า name จากฟอร์มและ Value คือค่าจาก Input
+$_GET is an array of variables passed to the current script via the URL parameters.
+
+$_POST is an array of variables passed to the current script via the HTTP POST method.
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  htmlspecialchars คือฟังก์ชั่นที่ใช้แปลงอักขระไปเป็นรหัส HTML entities เพื่อป้องกันการฉีดโค้ด
+HTML หรือ JS ที่ฟอร์ม
+
+  $data = trim($data); ตัดอักษรว่างหน้าหลังออก
+  $data = stripslashes($data); ลบเครื่องหมาย \
+  $data = htmlspecialchars($data); 
 */
     
 
